@@ -1,0 +1,105 @@
+.watch_wrapper {
+  position: relative;
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.watch_title {
+  text-align: center;
+}
+
+.watch_clear {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  cursor: pointer;
+}
+
+.watch_circle {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.second_hand {
+  width: 50px;
+  height: 1px;
+  border-bottom: 1px dashed black;
+  /* transform: rotate(-90deg); */
+  transform-origin: left;
+  position: absolute;
+  bottom: 50px;
+  left: 51px;
+}
+
+.minute_hand {
+  width: 50px;
+  height: 1px;
+  border-bottom: 1px solid black;
+  transform: rotate(-90deg);
+  transform-origin: left;
+  position: absolute;
+  bottom: 50px;
+  left: 51px;
+}
+
+.minute_hand::before {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 1px;
+  border-bottom: 1px solid black;
+  transform: rotate(-150deg);
+  bottom: 1px;
+  left: 40px;
+}
+
+.minute_hand::after {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 1px;
+  border-bottom: 1px solid black;
+  transform: rotate(150deg);
+  top: 4px;
+  left: 40px;
+}
+
+.hour_hand {
+  width: 35px;
+  height: 1px;
+  border-bottom: 1px solid black;
+  transform: rotate(90deg);
+  transform-origin: left;
+  position: absolute;
+  bottom: 50px;
+  left: 51px;
+}
+
+.hour_hand::before {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 1px;
+  border-bottom: 1px solid black;
+  transform: rotate(-150deg);
+  bottom: 1px;
+  left: 25px;
+}
+
+.hour_hand::after {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 1px;
+  border-bottom: 1px solid black;
+  transform: rotate(150deg);
+  top: 4px;
+  left: 25px;
+}
